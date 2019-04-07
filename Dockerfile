@@ -8,13 +8,13 @@ RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
 
 # Configure basic security
-COPY groovy/bootstrap/basic-security.groovy /usr/share/jenkins/ref/init.groovy.d/
+COPY configuration/groovy/basic-security.groovy /usr/share/jenkins/ref/init.groovy.d/
 
 # Pre-configure Jenkins admin user
 ARG password
 ENV JENKINS_USER admin
 ENV JENKINS_PASS $password
-COPY groovy/bootstrap/default-user.groovy /usr/share/jenkins/ref/init.groovy.d/
+COPY configuration/groovy/default-user.groovy /usr/share/jenkins/ref/init.groovy.d/
 
 # Configure maven setup
 USER root
