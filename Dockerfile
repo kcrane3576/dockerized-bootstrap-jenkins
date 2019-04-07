@@ -16,6 +16,9 @@ ENV JENKINS_USER admin
 ENV JENKINS_PASS $password
 COPY configuration/groovy/default-user.groovy /usr/share/jenkins/ref/init.groovy.d/
 
+# Pre-configure Jenkins with a seed job
+COPY configuration/groovy/seed.groovy /usr/share/jenkins/ref/init.groovy.d/
+
 # Configure maven setup
 USER root
 RUN apt-get update && apt-get install -y maven
