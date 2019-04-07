@@ -1,7 +1,7 @@
-#Dockerized Bookstrap Jenkins
+# Dockerized Bookstrap Jenkins
 A bootstrap dockerized jenkins setup for repeatable setup of Jenkins
 
-##Helpful commands used during development
+## Helpful commands used during development
 Docker command to clean up all docker containers
 ```bash
 docker rm $(docker ps -a -q)
