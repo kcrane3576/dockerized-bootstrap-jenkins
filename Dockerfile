@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:lts
+FROM jenkins/jenkins:lts@sha256:9da14be3a1642e23361b5947e967c8238ddb57fc9c994ac9958bba238f7f9188
 
 # Pre-install Jenkins plugins
 COPY configuration/plugins/plugins.txt /usr/share/jenkins/ref/plugins.txt
